@@ -1,0 +1,7 @@
+{
+  "serviceName": "LogstashService",
+  "taskDefinition": "Camp1-logstash",
+  "desiredCount": 1
+}
+
+

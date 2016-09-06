@@ -1,0 +1,36 @@
+{
+  "containerDefinitions":
+  [
+    {
+      "environment" : [
+        {
+          "name": "SERVICE_9997_NAME",
+          "value": "logstash"
+        },
+        {
+          "name": "SERVICE_9997_CHECK_HTTP",
+          "value": "/logstash"
+        },
+        {
+          "name": "SERVICE_9997_CHECK_INTERVAL",
+          "value": "10s"
+        },
+        {
+          "name": "SERVICE_TAGS",
+          "value": "http"
+        }
+      ],
+      "name" : "smcdr",
+      "image" : "prateek1411/logstash",
+      "memory":200,
+      "portMappings":[
+        {
+          "containerPort" : 9000,
+          "hostPort" : 9000
+        }
+      ],
+      "essential":true
+    }
+  ],
+  "family":"Camp1-logstash"
+}
